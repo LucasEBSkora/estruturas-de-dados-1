@@ -34,9 +34,19 @@ int dequeue(Queue* q) {
   q->start = (q->start + 1)%q->size;
   return elem;
 }
+
 int queue_empty(Queue* q) {
   return q->start == q->end;
 }
+
 int queue_full(Queue* q) {
   return q->start == ((q->end + 1)%q->size);
+}
+
+void print_queue(Queue* q) {
+  int i;
+  for (i = q->start; i != q->end; i = (i + 1)%q->size) {
+    printf("%i ", q->array[i]);
+  }
+  printf("\n");
 }

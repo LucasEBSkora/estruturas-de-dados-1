@@ -17,5 +17,6 @@ void enqueue(Queue* q, int elem);
 int dequeue(Queue* q);
 int queue_empty(Queue* q);
 int queue_full(Queue* q);
+void print_queue(Queue* q);
 
 #endif
