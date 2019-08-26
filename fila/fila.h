@@ -1,8 +1,6 @@
 #ifndef FILA_H
 #define FILA_H
 
-#include <stdio.h>
-#include <stdlib.h>
 
 typedef struct queue {
     long unsigned int start;

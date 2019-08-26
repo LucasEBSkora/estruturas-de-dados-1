@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "fila.h"
+#include "../fila/fila.h"
 
 int main (int argc, char *argv[]) {
-  
+
   if (argc != 3) {
     printf("Numero inadequado de parametros!an");
     return 1;
@@ -11,7 +11,7 @@ int main (int argc, char *argv[]) {
 
   int m = atoi(argv[1]);
   int n = atoi(argv[2]);
-  
+
 
   if (m < 1 || n < 1) {
     printf("Erro! Parametros invalidos\n");
@@ -23,15 +23,15 @@ int main (int argc, char *argv[]) {
 
   //preenche a fila com os números de 1 a n
   int i;
-  for (i = 1; i <= n; ++i) 
+  for (i = 1; i <= n; ++i)
     enqueue(q, i);
-  
+
   i = 0;
   while(!queue_empty(q)) {
 
     ++i;
 
-    //se estiver na m-ésima "pessoa", a tira da lista permanentemente 
+    //se estiver na m-ésima "pessoa", a tira da lista permanentemente
     if (i == m) {
       i = 0;
       printf(" %d", dequeue(q));
@@ -42,7 +42,7 @@ int main (int argc, char *argv[]) {
   }
 
   printf("\n");
-  
+
   destroy_queue(q);
   return 0;
 }

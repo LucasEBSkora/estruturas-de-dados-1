@@ -1,5 +1,8 @@
 #include "fila.h"
 
+#include <stdio.h>
+#include <stdlib.h>
+
 Queue* create_queue(long unsigned int size) {
   Queue* q = (Queue*) malloc(sizeof(Queue));
   q->start = 0;
@@ -44,12 +47,12 @@ int queue_full(Queue* q) {
 }
 
 void print_queue(Queue* q) {
-  
+
   long unsigned int i;
 
-  for (i = q->start; i != q->end; i = circular_increment(i, q->size)) 
+  for (i = q->start; i != q->end; i = circular_increment(i, q->size))
     printf("%d ", q->array[i]);
-  
+
   printf("\n");
 }
 
