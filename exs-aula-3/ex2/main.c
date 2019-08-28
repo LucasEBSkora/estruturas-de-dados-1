@@ -2,15 +2,17 @@
 #include <string.h>
 #include <stdio.h>
 
+#define N 6
+
 int bemFormado(const char *str);
 
 int main () {
-  const char* strings[4] = {
+  const char* strings[N] = {
     "(()[()])", "([)]",
-    "()[]", "([]"
+    "()[]", "([]", "({[]})", "{(])"
   };
   int i;
-  for(i = 0; i < 4; ++i) {
+  for(i = 0; i < N; ++i) {
     printf("%s ", strings[i]);
     if (bemFormado(strings[i])) printf("bem formado!\n");
     else printf("mal formado!\n");

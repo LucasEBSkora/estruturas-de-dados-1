@@ -6,19 +6,23 @@
 void posfixa(char *str);
 int eOperador(char c);
 int main () {
-  char* str = "(9+((0+1)*(2*3)))";
+  char str[] = "(9+((0+1)*(2*3)))";
   printf("%s = ", str);
   posfixa(str);
   printf("%s\n", str);
+  char str2[] = "((((1+2)+3)+4)/9)*7";
+  printf("%s = ", str2);
+  posfixa(str2);
+  printf("%s\n", str2);
   return 0;
 }
 
 void posfixa(char* str) {
-  int tam = strlen(str);
+  long unsigned int tam = strlen(str);
   char* nstr = (char*) malloc(tam*sizeof(char));
   Pilha* p = criarPilha(tam);
   //iterador para a string original
-  int i;
+  unsigned int i;
   //iterador para a string pós-fixa
   int j = 0;
   for(i = 0; i < tam; ++i) {
