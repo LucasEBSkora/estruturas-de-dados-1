@@ -1,0 +1,24 @@
+usuario_padrao@rle-desktop:~/Documentos/estruturas-de-dados-1/ordenacao-aula-1$ ./ex 10
+Tempo de execução (ordenação 1): 0.000005
+Tempo de execução (ordenação 2): 0.000004
+Tempo de execução (ordenação 3): 0.000003
+usuario_padrao@rle-desktop:~/Documentos/estruturas-de-dados-1/ordenacao-aula-1$ ./ex 100
+Tempo de execução (ordenação 1): 0.000144
+Tempo de execução (ordenação 2): 0.000064
+Tempo de execução (ordenação 3): 0.000077
+usuario_padrao@rle-desktop:~/Documentos/estruturas-de-dados-1/ordenacao-aula-1$ ./ex 1000
+Tempo de execução (ordenação 1): 0.014486
+Tempo de execução (ordenação 2): 0.001746
+Tempo de execução (ordenação 3): 0.002479
+usuario_padrao@rle-desktop:~/Documentos/estruturas-de-dados-1/ordenacao-aula-1$ ./ex 10000
+Tempo de execução (ordenação 1): 0.581044
+Tempo de execução (ordenação 2): 0.167743
+Tempo de execução (ordenação 3): 0.250198
+usuario_padrao@rle-desktop:~/Documentos/estruturas-de-dados-1/ordenacao-aula-1$ ./ex 100000
+Tempo de execução (ordenação 1): 57.304539
+Tempo de execução (ordenação 2): 16.639676
+Tempo de execução (ordenação 3): 24.788833
+usuario_padrao@rle-desktop:~/Documentos/estruturas-de-dados-1/ordenacao-aula-1$ ./ex 200000
+Tempo de execução (ordenação 1): 229.767636
+Tempo de execução (ordenação 2): 67.652944
+Tempo de execução (ordenação 3): 99.777897
