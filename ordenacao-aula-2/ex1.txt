@@ -1,0 +1,15 @@
+número de comparações:
+  O número de comparações feitas é igual ao número de vezes que a linha
+4 é executada, ou seja:
+  sum ( i = 1 -> n) (sum (j = (i + 1) -> n) (1)) =
+  sum ( i = 1 -> n) ( n - i ) = (n^2)/2 - n/2 ~=
+
+  O(n^2) comparações
+
+número de trocas:
+  O número de trocas realizadas é o número de vezes que a linha 6 é executada,
+ou seja:
+
+  sum ( i = 1 -> n) (1) = n
+
+  O(n) trocas

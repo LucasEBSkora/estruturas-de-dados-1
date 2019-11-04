@@ -1,0 +1,52 @@
+0 -> aleatório
+1 -> crescente
+2 -> decrescente
+
+./ex 10 0
+  Tempo de execução (Quick-Sort): 0.00
+./ex 10 1
+  Tempo de execução (Quick-Sort): 0.00
+./ex 10 2
+  Tempo de execução (Quick-Sort): 0.00
+
+./ex 100 0
+  Tempo de execução (Quick-Sort): 0.00
+./ex 100 1
+  Tempo de execução (Quick-Sort): 0.00
+./ex 100 2
+  Tempo de execução (Quick-Sort): 0.00
+
+./ex 1000 0
+  Tempo de execução (Quick-Sort): 0.00
+./ex 1000 1
+  Tempo de execução (Quick-Sort): 0.02
+./ex 1000 2
+  Tempo de execução (Quick-Sort): 0.01
+
+./ex 10000 0
+  Tempo de execução (Quick-Sort): 0.01
+./ex 10000 1
+  Tempo de execução (Quick-Sort): 0.63
+./ex 10000 2
+  Tempo de execução (Quick-Sort): 0.38
+
+./ex 100000 0
+  Tempo de execução (Quick-Sort): 0.03
+./ex 100000 1
+  Tempo de execução (Quick-Sort): 61.99
+./ex 100000 2
+  Tempo de execução (Quick-Sort): 37.25
+
+./ex 1000000 0
+  Tempo de execução (Quick-Sort): 0.29
+./ex 1000000 1
+  Em uma estimativa grosseira, 5 horas, se não excedesse o tamanho da pilha
+./ex 1000000 2
+  Em uma estimativa grosseira, 3 horas, se não excedesse o tamanho da pilha
+
+  O tempo para o conjunto crescente sempre foi o pior, pois nesse caso o
+algoritmo nunca conseguirá dividir o conjunto, além de que, como o valor do pivô
+sempre é maior do que o valor sendo comparado, o algoritmo executará todas as
+trocas possíveis. Para os decrescentes, o tempo também é muito ruim, pois ele
+nunca conseguirá fazer nenhuma divisão, mas, nesse caso, pelo menos não é
+forçado a fazer todas as trocas.

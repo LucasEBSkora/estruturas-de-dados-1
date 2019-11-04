@@ -1,0 +1,25 @@
+./ex
+
+usage: ./ex n i p
+	n -> number of elements
+	i -> position to find
+	p -> print array
+
+
+./ex 5 2 1
+2 5 5 1 1
+o 2-esimo elemento ordenado e 2
+1 1 2 5 5
+o valor correto e 2
+
+./ex 1000000 505050 0
+o 505050-esimo elemento ordenado e 505857
+o valor correto e 505857
+
+./ex 10000000 5050505 0
+o 5050505-esimo elemento ordenado e 5045242
+o valor correto e 5045242
+
+./ex 100000000 50505050 0
+o 50505050-esimo elemento ordenado e 49390034
+o valor correto e 49390034
