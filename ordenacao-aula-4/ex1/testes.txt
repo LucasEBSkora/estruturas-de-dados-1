@@ -1,0 +1,25 @@
+ ./ex
+usage: ./ex n i
+	n -> number of elements
+	p -> print array
+
+ ./ex 100 0
+Tempo de execução (Merge-Sort): 0.00
+
+ ./ex 1000 0
+Tempo de execução (Merge-Sort): 0.00
+
+ ./ex 10000 0
+Tempo de execução (Merge-Sort): 0.01
+
+ ./ex 100000 0
+Tempo de execução (Merge-Sort): 0.03
+
+ ./ex 1000000 0
+Tempo de execução (Merge-Sort): 0.33
+
+ ./ex 10000000 0
+Tempo de execução (Merge-Sort): 3.87
+
+ ./ex 100000000 0
+ Tempo de execução (Merge-Sort): 43.74
