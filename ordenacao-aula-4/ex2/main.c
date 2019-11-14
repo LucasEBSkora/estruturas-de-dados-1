@@ -33,12 +33,18 @@ void desaloca_imagem (Imagem *img) {
 }
 
 void criarVetor(int **m, int i, int j, int tamanho_da_janela, int* v) {
+
   int k,l;
-  for (k = -floor(tamanho_da_janela/2); k < floor(tamanho_da_janela/2); ++k)
-    for(l = -floor(tamanho_da_janela/2); l < floor(tamanho_da_janela/2); ++l) {
+
+  for (k = -ceil(tamanho_da_janela/2); k <= tamanho_da_janela/2; ++k) {
+    for(l = -ceil(tamanho_da_janela/2); l <= tamanho_da_janela/2; ++l) {
       *(v++) = m[i  + k ][j + l];
     }
+  }
+  
+
 }
+
 
 void trocar(int *v, int i, int j) {
   int aux = v[i];
@@ -87,11 +93,14 @@ Imagem* Processamento (Imagem *img, int tamanho_da_janela) {
 
   int i, j;
   for (i = 0; i < img->nlinhas; ++i)
-    for (j = 0; j < img->nlinhas; ++j) {
+    for (j = 0; j < img->ncolunas; ++j) {
       int k, l;
 
       k = (i < floor(tamanho_da_janela/2)) ? floor(tamanho_da_janela/2) : i;
       l = (j < floor(tamanho_da_janela/2)) ? floor(tamanho_da_janela/2) : j;
+
+      if (k > img->nlinhas - 1 - floor(tamanho_da_janela/2)) k = img->nlinhas - 1 - floor(tamanho_da_janela/2);
+      if (l > img->ncolunas - 1 - floor(tamanho_da_janela/2)) l = img->ncolunas -1 - floor(tamanho_da_janela/2);
 
       criarVetor(img->mat, k, l, tamanho_da_janela, v);
 
@@ -105,9 +114,9 @@ Imagem* Processamento (Imagem *img, int tamanho_da_janela) {
 
 int main () {
   /**/
-  FILE *fin  = fopen("lena.pgm", "r");
+  FILE *fin  = fopen("imagens/lena.pgm", "r");
   FILE *fout = fopen("saida.pgm", "w");
-  int tamanho_da_janela = 3; /*Teste com tamanhos: 3, 5, 7, 9, ... (sempre ímpar)*/
+  int tamanho_da_janela = 21; /*Teste com tamanhos: 3, 5, 7, 9, ... (sempre ímpar)*/
 
   /*Lendo a imagem:*/
   int nlinhas, ncolunas, nlevels;
